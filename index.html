@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retiro Jovens - Comunhão tropical</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                        url('https://placehold.co/1920x1080') no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+            min-height: 600px;
+        }
+        
+        .countdown-box {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        
+        .program-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: scale(1.03);
+        }
+        
+        footer {
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg fixed w-full z-10">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold text-indigo-700">Comunhão tropical</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-indigo-600 transition">Início</a>
+                    <a href="#about" class="text-gray-700 hover:text-indigo-600 transition">Sobre</a>
+                    <a href="#program" class="text-gray-700 hover:text-indigo-600 transition">Programação</a>
+                    <a href="#location" class="text-gray-700 hover:text-indigo-600 transition">Local</a>
+                    <a href="#register" class="text-gray-700 hover:text-indigo-600 transition">Inscrição</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="mobile-menu-button p-2 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu hidden md:hidden bg-white pb-4 px-4">
+            <a href="#home" class="block py-2 text-gray-700 hover:text-indigo-600">Início</a>
+            <a href="#about" class="block py-2 text-gray-700 hover:text-indigo-600">Sobre</a>
+            <a href="#program" class="block py-2 text-gray-700 hover:text-indigo-600">Programação</a>
+            <a href="#location" class="block py-2 text-gray-700 hover:text-indigo-600">Local</a>
+            <a href="#register" class="block py-2 text-gray-700 hover:text-indigo-600">Inscrição</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section flex items-center justify-center text-white relative">
+        <div class="text-center px-4">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">RETIRO JOVEM 2025</h1>
+            <p class="text-xl md:text-2xl mb-8">Transformando vidas através de Cristo</p>
+            
+            <div class="countdown-box p-6 rounded-lg inline-block">
+                <h3 class="text-xl mb-4">Começa em:</h3>
+                <div id="countdown" class="flex justify-center space-x-4">
+                    <div class="text-center">
+                        <span id="days" class="text-3xl font-bold">00</span>
+                        <span class="block">Dias</span>
+                    </div>
+                    <div class="text-center">
+                        <span id="hours" class="text-3xl font-bold">00</span>
+                        <span class="block">Horas</span>
+                    </div>
+                    <div class="text-center">
+                        <span id="minutes" class="text-3xl font-bold">00</span>
+                        <span class="block">Minutos</span>
+                    </div>
+                    <div class="text-center">
+                        <span id="seconds" class="text-3xl font-bold">00</span>
+                        <span class="block">Segundos</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-10">
+                <a href="#register" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 inline-block">Inscreva-se</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Sobre o Retiro</h2>
+                <div class="w-20 h-1 bg-indigo-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">Um momento especial para jovens se encontrarem com Deus e uns com os outros</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 px-4">
+                    <img src="https://placehold.co/800x600" alt="Grupo de jovens felizes reunidos em um retiro espiritual, com paisagem campestre ao fundo" class="rounded-lg shadow-xl">
+                </div>
+                <div class="md:w-1/2 px-4">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">O que é o Retiro Jovem?</h3>
+                    <p class="text-gray-600 mb-6">
+                        O Retiro Jovem é um evento anual organizado pela nossa igreja para proporcionar aos jovens uma experiência transformadora com Deus. Durante esses dias, teremos momentos de adoração, ensino bíblico, comunhão e muitas atividades recreativas.
+                    </p>
+                    
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Tema deste ano:</h3>
+                    <p class="text-indigo-600 text-xl font-semibold mb-4">"Chamados para Transformar"</p>
+                    <p class="text-gray-600 mb-6">
+                        Baseado em Romanos 12:2 - "Não se conforme com este mundo, mas transforme-se pela renovação da sua mente..."
+                    </p>
+                    
+                    <div class="flex space-x-4 mt-8">
+                        <div class="text-center">
+                            <span class="text-3xl font-bold text-indigo-600">03</span>
+                            <span class="block text-gray-600">Dias</span>
+                        </div>
+                        <div class="text-center">
+                            <span class="text-3xl font-bold text-indigo-600">10+</span>
+                            <span class="block text-gray-600">Atividades</span>
+                        </div>
+                        <div class="text-center">
+                            <span class="text-3xl font-bold text-indigo-600">05</span>
+                            <span class="block text-gray-600">Palestrantes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Speakers Section -->
+    <section class="py-20 bg-gray-100">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Nossos Palestrantes</h2>
+                <div class="w-20 h-1 bg-indigo-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">Conheça os ministros que estarão conosco neste retiro</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Speaker 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md transition duration-300 hover:shadow-lg">
+                    <div class="w-full h-64 bg-gray-200 overflow-hidden">
+                        <img src="https://placehold.co/400x400" alt="Pastor João Evangelista, palestrante do retiro jovem, usando terno e sorrindo" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold text-gray-800">Pr. João Evangelista</h3>
+                        <p class="text-indigo-600">Ministério de Jovens</p>
+                        <p class="text-gray-600 mt-2">Especialista em liderança cristã e ministério com jovens há mais de 15 anos.</p>
+                    </div>
+                </div>
+                
+                <!-- Speaker 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md transition duration-300 hover:shadow-lg">
+                    <div class="w-full h-64 bg-gray-200 overflow-hidden">
+                        <img src="https://placehold.co/400x400" alt="Pastora Maria da Paz, palestrante motivacional feminina com sorriso acolhedor" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold text-gray-800">Pra. Maria da Paz</h3>
+                        <p class="text-indigo-600">Aconselhamento Cristão</p>
+                        <p class="text-gray-600 mt-2">Especializada em relacionamentos e saúde emocional na perspectiva cristã.</p>
+                    </div>
+                </div>
+                
+                <!-- Speaker 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md transition duration-300 hover:shadow-lg">
+                    <div class="w-full h-64 bg-gray-200 overflow-hidden">
+                        <img src="https://placehold.co/400x400" alt="Missionário Lucas Peregrino, evangelista jovem com expressão animada" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold text-gray-800">Mis. Lucas Peregrino</h3>
+                        <p class="text-indigo-600">Evangelismo Criativo</p>
+                        <p class="text-gray-600 mt-2">Conhecido por abordagens inovadoras para alcançar a geração jovem.</p>
+                    </div>
+                </div>
+                
+                <!-- Speaker 4 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md transition duration-300 hover:shadow-lg">
+                    <div class="w-full h-64 bg-gray-200 overflow-hidden">
+                        <img src="https://placehold.co/400x400" alt="Pastor Davi Músico, ministro de louvor tocando violão em ambiente casual" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold text-gray-800">Pr. Davi Músico</h3>
+                        <p class="text-indigo-600">Ministério de Louvor</p>
+                        <p class="text-gray-600 mt-2">Líder de adoração e compositor de músicas cristãs contemporâneas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Section -->
+    <section id="program" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Programação</h2>
+                <div class="w-20 h-1 bg-indigo-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">Confira nossa programação especial para este retiro</p>
+            </div>
+            
+            <!-- Day 1 -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-6 border-b pb-2">Dia 1 - Chegada e Abertura</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Event 1 -->
+                    <div class="program-card bg-gray-50 rounded-lg p-6 shadow-md transition duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-indigo-100 p-2 rounded-full mr-4">
+                                <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="text-gray-500">14:00 - 16:00</span>
+                            </div>
+                        </div>
+                        <h4 class="text-xl font-semibold text-gray-800 mb-2">Chegada e Credenciamento</h4>
+                        <p class="text-gray-600">Recepção e acomodação dos participantes no local do retiro.</p>
+                    </div>
+                    
+                    <!-- Event 2 -->
+                    <div class="program-card bg-gray-50 rounded-lg p-6 shadow-md transition duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-indigo-100 p-2 rounded-full mr-4">
+                                <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="text-gray-500">19:00 - 21:00</span>
+                            </div>
+                        </div>
+                        <h4 class="text-xl font-semibold text-gray-800 mb-2">Culto de Abertura</h4>
+                        <p class="text-gray-600">Momento de louvor e palavra com o Pr. João Evangelista.</p>
+                    </div>
+                    
+                    <!-- Event 3 -->
+                    <div class="program-card bg-gray-50 rounded-lg p-6 shadow-md transition duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-indigo-100 p-2 rounded-full mr-4">
+                                <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="text-gray-500">21:30 - 23:00</span>
+                            </div>
+                        </div>
+                        <h4 class="text-xl font-semibold text-gray-800 mb-2">Noite de Integração</h4>
+                        <p class="text-gray-600">Atividades e dinâmicas para quebrar o gelo e conhecer os participantes.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Day 2 -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-6 border-b pb-2">Dia 2 - Transformação</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Event 1 -->
+                    <div class="program-card bg-gray-50 rounded-lg p-6 shadow-md transition duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-indigo-100 p-2 rounded-full mr-4">
+                                <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="text-gray-500">07:00 - 08:00</span>
+                            </div>
+                        </div>
+                        <h4 class="text-xl font-semibold text-gray-800 mb-2">Manhã com Deus</h4>
+                        <p class="text-gray-600">Momento devocional individual com orientações.</p>
+                    </div>
+                    
+                    <!-- Event 2 -->
+                    <div class="program-card bg-gray-50 rounded-lg p-6 shadow-md transition duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-indigo-100 p-2 rounded-full mr-4">
+                                <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="text-gray-500">09:30 - 11:30</span>
+                            </div>
+                        </div>
+                        <h4 class="text-xl font-semibold text-gray-800 mb-2">Palestra: Chamados para Transformar</h4>
+                        <p class="text-gray-600">Com Pra. Maria da Paz - transformação interior.</p>
+                    </div>
+                    
+                    <!-- Event 3 -->
+                    <div class="program-card bg-gray-50 rounded-lg p-6 shadow-md transition duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-indigo-100 p-2 rounded-full mr-4">
+                                <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="text-gray-500">14:00 - 16:00</span>
+                            </div>
+                        </div>
+                        <h4 class="text-xl font-semibold text-gray-800 mb-2">Oficinas Temáticas</h4>
+                        <p class="text-gray-600">Escolha entre diferentes oficinas sobre relacionamentos, louvor ou evangelismo.</p>
+                    </div>
+                    
+                    <!-- Event 4 -->
+                    <div class="program-card bg-gray-50 rounded-lg p-6 shadow-md transition duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-indigo-100 p-2 rounded-full mr-4">
+                                <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="text-gray-500">19:00 - 21:30</span>
+                            </div>
+                        </div>
+                        <h4 class="text-xl font-semibold text-gray-800 mb-2">Culto de Avivamento</h4>
+                        <p class="text-gray-600">Momento poderoso de adoração e ministração com Mis. Lucas Peregrino.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Day 3 -->
+            <div>
+                <h3 class="text-2xl font-semibold text-gray-800 mb-6 border-b pb-2">Dia 3 - Compromisso e Encerramento</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Event 1 -->
+                    <div class="program-card bg-gray-50 rounded-lg p-6 shadow-md transition duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-indigo-100 p-2 rounded-full mr-4">
+                                <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="text-gray-500">08:00 - 09:30</span>
+                            </div>
+                        </div>
+                        <h4 class="text-xl font-semibold text-gray-800 mb-2">Café da Manhã e Compartilhamento</h4>
+                        <p class="text-gray-600">Momento de comunhão e compartilhamento das experiências.</p>
+                    </div>
+                    
+                    <!-- Event 2 -->
+                    <div class="program-card bg-gray-50 rounded-lg p-6 shadow-md transition duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-indigo-100 p-2 rounded-full mr-4">
+                                <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="text-gray-500">10:00 - 12:00</span>
+                            </div>
+                        </div>
+                        <h4 class="text-xl font-semibold text-gray-800 mb-2">Culto de Encerramento</h4>
+                        <p class="text-gray-600">Mensagem final e momento de compromisso com o Pr. João Evangelista.</p>
+                    </div>
+                    
+                    <!-- Event 3 -->
+                    <div class="program-card bg-gray-50 rounded-lg p-6 shadow-md transition duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-indigo-100 p-2 rounded-full mr-4">
+                                <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="text-gray-500">12:30 - 14:00</span>
+                            </div>
+                        </div>
+                        <h4 class="text-xl font-semibold text-gray-800 mb-2">Almoço de Despedida</h4>
+                        <p class="text-gray-600">Último momento juntos antes de retornar para casa.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities Section -->
+    <section class="py-20 bg-gradient-to-r from-indigo-500 to-purple-600 text-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Atividades Especiais</h2>
+                <div class="w-20 h-1 bg-white mx-auto mb-6"></div>
+                <p class="max-w-2xl mx-auto opacity-90">Além da programação principal, temos muitas atividades para você se divertir e crescer</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Activity 1 -->
+                <div class="bg-white bg-opacity-10 rounded-lg p-6 backdrop-blur-sm border border-white border-opacity-20">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-white bg-opacity-20 p-3 rounded-full mr-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold">Grupos de Convivência</h3>
+                    </div>
+                    <p class="opacity-90">Pequenos grupos para compartilhar experiências e crescer juntos na fé.</p>
+                </div>
+                
+                <!-- Activity 2 -->
+                <div class="bg-white bg-opacity-10 rounded-lg p-6 backdrop-blur-sm border border-white border-opacity-20">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-white bg-opacity-20 p-3 rounded-full mr-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold">Workshops Criativos</h3>
+                    </div>
+                    <p class="opacity-90">Aprenda novas habilidades como louvor, dança cristã e evangelismo criativo.</p>
+                </div>
+                
+                <!-- Activity 3 -->
+                <div class="bg-white bg-opacity-10 rounded-lg p-6 backdrop-blur-sm border border-white border-opacity-20">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-white bg-opacity-20 p-3 rounded-full mr-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold">Atividades Recreativas</h3>
+                    </div>
+                    <p class="opacity-90">Gincanas, esportes e jogos para diversão e integração entre os participantes.</p>
+                </div>
+                
+                <!-- Activity 4 -->
+                <div class="bg-white bg-opacity-10 rounded-lg p-6 backdrop-blur-sm border border-white border-opacity-20">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-white bg-opacity-20 p-3 rounded-full mr-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold">Noite de Talentos</h3>
+                    </div>
+                    <p class="opacity-90">Mostre seus talentos e celebre os dons dados por Deus.</p>
+                </div>
+                
+                <!-- Activity 5 -->
+                <div class="bg-white bg-opacity-10 rounded-lg p-6 backdrop-blur-sm border border-white border-opacity-20">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-white bg-opacity-20 p-3 rounded-full mr-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold">Orações Especiais</h3>
+                    </div>
+                    <p class="opacity-90">Momentos dedicados para oração pessoal e ministração individual.</p>
+                </div>
+                
+                <!-- Activity 6 -->
+                <div class="bg-white bg-opacity-10 rounded-lg p-6 backdrop-blur-sm border border-white border-opacity-20">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-white bg-opacity-20 p-3 rounded-full mr-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold">Lanches e Coffee Breaks</h3>
+                    </div>
+                    <p class="opacity-90">Deliciosos momentos para recarregar as energias e bater papo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Local do Evento</h2>
+                <div class="w-20 h-1 bg-indigo-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">Um lugar especial para viver uma experiência transformadora</p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row">
+                <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pr-8">
+                    <div class="bg-gray-100 rounded-lg overflow-hidden h-96">
+                        <img src="https://placehold.co/800x600" alt="Retiro espiritual em local campestre com chalés de madeira, área verde extensa e montanhas ao fundo em dia ensolarado" class="w-full h-full object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Retiro Santa Clara</h3>
+                            <p class="text-gray-600">Rodovia BR-101, Km 123 - Santa Clara, SC</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Estrutura do Local:</h3>
+                        <ul class="grid grid-cols-2 gap-4">
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-indigo-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M5 17v4M3 19h4m10-16v4m2-2h-4m4 10v4m2-2h-4"></path>
+                                </svg>
+                                <span class="text-gray-600">Chalés aconchegantes</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-indigo-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                                </svg>
+                                <span class="text-gray-600">Ampla área verde</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-indigo-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10"></path>
+                                </svg>
+                                <span class="text-gray-600">Piscina aquecida</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-indigo-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path>
+                                </svg>
+                                <span class="text-gray-600">Auditório climatizado</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-indigo-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
+                                </svg>
+                                <span class="text-gray-600">Quadras esportivas</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-indigo-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                                <span class="text-gray-600">Wi-Fi em áreas comuns</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="bg-gray-100 rounded-lg overflow-hidden h-96">
+                        <!-- Mapa do Google Maps -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.659473137082!2d-51.18716062458405!3d-30.039741474921934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9519790e4d0e3beb%3A0x1a3ebd5a3e4f4e7a!2sPorto%20Alegre%2C%20RS!5e0!3m2!1spt-BR!2sbr!4v1687531234567!5m2!1spt-BR!2sbr" 
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Como chegar:</h3>
+                        <div class="space-y-4">
+                            <div class="flex">
+                                <div class="bg-indigo-100 rounded-full p-2 mr-4">
+                                    <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">De Ônibus</h4>
+                                    <p class="text-gray-600">Linha 123 - Descer no ponto final (Retiro Sta. Clara)</p>
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div class="bg-indigo-100 rounded-full p-2 mr-4">
+                                    <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">De Carro</h4>
+                                    <p class="text-gray-600">Rodovia BR-101, Km 123. Estacionamento gratuito disponível</p>
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div class="bg-indigo-100 rounded-full p-2 mr-4">
+                                    <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800">Ônibus da Igreja</h4>
+                                    <p class="text-gray-600">Saída do templo às 13h no dia do evento (inscrição prévia necessária)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-gray-100">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Depoimentos</h2>
+                <div class="w-20 h-1 bg-indigo-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">O que dizem sobre os retiros anteriores</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-white rounded-lg p-6 shadow-md relative">
+                    <div class="absolute -top-4 -left-4 bg-indigo-600 text-white rounded-full w-12 h-12 flex items-center justify-center">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>
+                        </svg>
+                    </div>
+                    <div class="mt-4">
+                        <p class="text-gray-600 italic mb-4">
+                            "O retiro mudou minha vida! Foi um tempo de renovação espiritual e fiz amigos que serão para sempre. Recomendo a todos os jovens da igreja!"
+                        </p>
+                        <div class="flex items-center">
+                            <img src="https://placehold.co/80x80" alt="Ana Paula Santos, participante do retiro jovem 2022, sorrindo com paisagem ao fundo" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Ana Paula Santos</h4>
+                                <p class="text-gray-600 text-sm">Participante - Retiro 2022</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-white rounded-lg p-6 shadow-md relative">
+                    <div class="absolute -top-4 -left-4 bg-indigo-600 text-white rounded-full w-12 h-12 flex items-center justify-center">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>
+                        </svg>
+                    </div>
+                    <div class="mt-4">
+                        <p class="text-gray-600 italic mb-4">
+                            "Através do retiro entendi meu propósito em Cristo. As mensagens foram profundas e as atividades nos ajudaram a colocar em prática o que aprendemos."
+                        </p>
+                        <div class="flex items-center">
+                            <img src="https://placehold.co/80x80" alt="Carlos Henrique Oliveira, líder de jovens na igreja, falando em público" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Carlos Henrique</h4>
+                                <p class="text-gray-600 text-sm">Líder Jovem</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-white rounded-lg p-6 shadow-md relative">
+                    <div class="absolute -top-4 -left-4 bg-indigo-600 text-white rounded-full w-12 h-12 flex items-center justify-center">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>
+                        </svg>
+                    </div>
+                    <div class="mt-4">
+                        <p class="text-gray-600 italic mb-4">
+                            "Minha filha voltou completamente transformada do retiro. Agradeço a toda equipe pelo carinho e dedicação com nossos jovens!"
+                        </p>
+                        <div class="flex items-center">
+                            <img src="https://placehold.co/80x80" alt="Maria Lucia Fernandes, mãe de participante, em reunião de família sorridente" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Maria Lucia</h4>
+                                <p class="text-gray-600 text-sm">Mãe de Participante</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card bg-white rounded-lg p-6 shadow-md relative">
+                    <div class="absolute -top-4 -left-4 bg-indigo-600 text-white rounded-full w-12 h-12 flex items-center justify-center">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>
+                        </svg>
+                    </div>
+                    <div class="mt-4">
+                        <p class="text-gray-600 italic mb-4">
+                            "Como voluntário, pude presenciar jovens tendo encontros genuínos com Deus. Ver suas vidas se transformando é a maior recompensa!"
+                        </p>
+                        <div class="flex items-center">
+                            <img src="https://placehold.co/80x80" alt="José Ricardo, voluntário no retiro jovem por 5 anos, ajudando em atividades" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-semibold text-gray-800">José Ricardo</h4>
+                                <p class="text-gray-600 text-sm">Voluntário há 5 anos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Register Section -->
+    <section id="register" class="py-20 bg-indigo-50">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Faça sua Inscrição</h2>
+                <div class="w-20 h-1 bg-indigo-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">Garanta já sua vaga neste evento transformador</p>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow-xl overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 bg-indigo-600 text-white p-8 md:p-12 flex flex-col justify-center">
+                        <h3 class="text-2xl font-bold mb-4">Informações Importantes</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Valor promocional até dia 15/10: R$ 250,00</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Após essa data: R$ 300,00</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Pagamento em até 3x no cartão</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Inclui todas as refeições, hospedagem e atividades</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Vagas limitadas - Reserve logo!</span>
+                            </li>
+                        </ul>
+                        
+                        <div class="mt-8">
+                            <h4 class="text-xl font-semibold mb-2">Dúvidas?</h4>
+                            <p class="mb-4">Entre em contato com nossa equipe:</p>
+                            <div class="flex items-center mb-2">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                                </svg>
+                                <span>(51) 99999-9999</span>
+                            </div>
+                            <div class="flex items-center">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                                <span>retirojovem@igreja.com</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-1/2 p-8 md:p-12">
+                        <form id="registrationForm" class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Nome Completo</label>
+                                <input type="text" id="name" name="name" required 
+                                       class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-gray-700 font-medium mb-2">E-mail</label>
+                                <input type="email" id="email" name="email" required 
+                                       class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            </div>
+                            
+                            <div>
+                                <label for="phone" class="block text-gray-700 font-medium mb-2">Telefone</label>
+                                <input type="tel" id="phone" name="phone" required 
+                                       class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            </div>
+                            
+                            <div>
+                                <label for="age" class="block text-gray-700 font-medium mb-2">Idade</label>
+                                <input type="number" id="age" name="age" min="13" max="35" required 
+                                       class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            </div>
+                            
+                            <div>
+                                <label for="church" class="block text-gray-700 font-medium mb-2">Igreja (se membro)</label>
+                                <input type="text" id="church" name="church" 
+                                       class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            </div>
+                            
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-2">Forma de Pagamento</label>
+                                <div class="space-y-2">
+                                    <div class="flex items-center">
+                                        <input type="radio" id="credit" name="payment" value="credit" class="mr-2" checked>
+                                        <label for="credit">Cartão de Crédito (até 3x)</label>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <input type="radio" id="transfer" name="payment" value="transfer" class="mr-2">
+                                        <label for="transfer">Transferência Bancária (10% off)</label>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <input type="radio" id="installment" name="payment" value="installment" class="mr-2">
+                                        <label for="installment">Plano Parcelado (5x no boleto)</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="pt-4">
+                                <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
+                                    Finalizar Inscrição
+                                </button>
+                            </div>
+                            
+                            <p class="text-sm text-gray-500 text-center">Ao se inscrever, você concorda com nossos <a href="#" class="text-indigo-600 hover:underline">Termos de Serviço</a> e <a href="#" class="text-indigo-600 hover:underline">Política de Privacidade</a>.</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Galeria</h2>
+                <div class="w-20 h-1 bg-indigo-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">Memórias dos últimos retiros</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <!-- Gallery Item 1 -->
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <img src="https://placehold.co/400x300" alt="Grupo de jovens em círculo, orando juntos durante o culto no retiro passado ao ar livre" class="w-full h-48 object-cover hover:scale-105 transition duration-300">
+                </div>
+                
+                <!-- Gallery Item 2 -->
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <img src="https://placehold.co/400x300" alt="Momento de louvor com todos os participantes cantando e levantando as mãos na tenda principal" class="w-full h-48 object-cover hover:scale-105 transition duration-300">
+                </div>
+                
+                <!-- Gallery Item 3 -->
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <img src="https://placehold.co/400x300" alt="Jovens participando de atividades esportivas na quadra do retiro, competindo com alegria" class="w-full h-48 object-cover hover:scale-105 transition duration-300">
+                </div>
+                
+                <!-- Gallery Item 4 -->
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <img src="https://placehold.co/400x300" alt="Palestrante animado pregando no palco enquanto os jovens ouvem atentamente na plateia" class="w-full h-48 object-cover hover:scale-105 transition duration-300">
+                </div>
+                
+                <!-- Gallery Item 5 -->
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <img src="https://placehold.co/400x300" alt="Noite de talentos com jovem cantando no palco e plateia aplaudindo entusiasmada" class="w-full h-48 object-cover hover:scale-105 transition duration-300">
+                </div>
+                
+                <!-- Gallery Item 6 -->
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <img src="https://placehold.co/400x300" alt="Grupo de jovens conversando e rindo durante o café da manhã no refeitório" class="w-full h-48 object-cover hover:scale-105 transition duration-300">
+                </div>
+                
+                <!-- Gallery Item 7 -->
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <img src="https://placehold.co/400x300" alt="Atividade recreativa ao ar livre com jovens formando equipes e trabalhando juntos" class="w-full h-48 object-cover hover:scale-105 transition duration-300">
+                </div>
+                
+                <!-- Gallery Item 8 -->
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <img src="https://placehold.co/400x300" alt="Último dia do retiro com todos os participantes reunidos para foto oficial no auditório" class="w-full h-48 object-cover hover:scale-105 transition duration-300">
+                </div>
+            </div>
+            
+            <div class="text-center mt-10">
+                <a href="#" class="inline-block px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full transition duration-300">
+                    Ver Mais Fotos
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-100">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Perguntas Frequentes</h2>
+                <div class="w-20 h-1 bg-indigo-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">Tire suas dúvidas sobre o retiro</p>
+            </div>
+            
+            <div class="space-y-4">
+                <!-- Question 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="faq-question w-full flex justify-between items-center p-6 focus:outline-none">
+                        <h3 class="text-lg font-semibold text-gray-800 text-left">Quem pode participar do retiro?</h3>
+                        <svg class="w-5 h-5 text-indigo-600 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-6 pb-6 hidden">
+                        <p class="text-gray-600">O retiro é aberto para jovens de 13 a 35 anos. Membros da igreja e convidados são bem-vindos, desde que estejam em sintonia com os princípios cristãos que norteiam o evento.</p>
+                    </div>
+                </div>
+                
+                <!-- Question 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="faq-question w-full flex justify-between items-center p-6 focus:outline-none">
+                        <h3 class="text-lg font-semibold text-gray-800 text-left">O que levar para o retiro?</h3>
+                        <svg class="w-5 h-5 text-indigo-600 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-6 pb-6 hidden">
+                        <p class="text-gray-600 mb-4">Recomendamos trazer:</p>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                            <li>Roupas confortáveis para 3 dias (incluindo agasalhos)</li>
+                            <li>Pijama e chinelo</li>
+                            <li>Produtos de higiene pessoal</li>
+                            <li>Bíblia, caderno e caneta</li>
+                            <li>Toalha de banho e de rosto</li>
+                            <li>Remédios de uso pessoal (se necessário)</li>
+                            <li>Dinheiro extra para lembrancinhas (opcional)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Question 3 -->
+                <div
