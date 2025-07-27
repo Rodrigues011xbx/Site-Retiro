@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    
+}
+
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('./img/foto_capa.png') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    min-height: 600px;
+}
+
+.countdown-box {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.program-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.testimonial-card {
+    transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: scale(1.03);
+}
+
+footer {
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+}
+
+#nav-fundo{
+    background-color: rgba(128, 128, 128, 0.692);
+}
+
