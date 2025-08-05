@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // If the countdown is over, display a message
             if (distance < 0) {
                 clearInterval(countdownInterval);
-                countdownElement.innerHTML = '<h3 class="text-xl mb-4 text-tropical-golden-yellow">O retiro começou! Bem-vindos!</h3>';
+                countdownElement.innerHTML = '<h3 class="text-xl mb-4 text-tropical-soft-yellow">O retiro começou! Bem-vindos!</h3>';
             }
         };
 
@@ -160,9 +160,49 @@ document.addEventListener('DOMContentLoaded', () => {
                 link.classList.add('active');
                 link.querySelector('.nav-underline').style.width = '100%'; // Activate underline
             }
+            // Special handling for the "Inscrição" link in mobile menu
+            if (link.getAttribute('target') === '_blank' && link.getAttribute('href').includes('forms.gle')) {
+                // This link doesn't correspond to a section ID, so don't highlight it based on scroll position
+                // unless it's the currently active one from a direct click (which is handled by the mobile menu close logic)
+            }
         });
     };
 
     window.addEventListener('scroll', highlightNavLink);
     highlightNavLink(); // Initial call
+
+    // Carousel functionality
+    const carousel = document.getElementById('carousel');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    let currentIndex = 0;
+    const totalImages = carousel ? carousel.children.length : 0;
+
+    const updateCarousel = () => {
+        if (carousel) {
+            carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+    };
+
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex === 0) ? totalImages - 1 : currentIndex - 1;
+            updateCarousel();
+        });
+    }
+
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex === totalImages - 1) ? 0 : currentIndex + 1;
+            updateCarousel();
+        });
+    }
+
+    // Optional: Auto-advance carousel
+    // if (carousel) {
+    //     setInterval(() => {
+    //         currentIndex = (currentIndex === totalImages - 1) ? 0 : currentIndex + 1;
+    //         updateCarousel();
+    //     }, 5000); // Change image every 5 seconds
+    // }
 });

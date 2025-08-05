@@ -1,45 +1,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Pacifico&display=swap');
 
-/* Custom Color Palette */
+/* Custom Color Palette - Comunhão Tropical (Atualizada) */
 :root {
-    --tropical-golden-yellow: #FFD700; /* Amarelo Dourado */
-    --tropical-emerald: #2ECC71;     /* Verde Esmeralda */
-    --tropical-blue-turq: #48D1CC;   /* Azul Turquesa */
-    --tropical-coral: #FF6347;       /* Rosa Coral */
-    --tropical-dark-green: #1A5240;  /* Verde Escuro para texto */
-    --tropical-light-sand: #FFF8DC;  /* Bege/Areia Clara */
-    --tropical-light-sand-darker: #F5F5DC; /* Bege/Areia um pouco mais escura */
+    --tropical-soft-yellow: #FFD700;      /* Amarelo Suave (Sol, Destaques) */
+    --tropical-sunset-orange: #FF8C00;    /* Laranja Pôr do Sol (Energia, Calor) */
+    --tropical-coral: #FF6347;            /* Rosa Coral (Corais, Flores) */
+    --tropical-dark-brown: #5A3B2B;       /* Marrom Coco Escuro (Troncos, Terra) */
+    --tropical-light-sand: #FFF8DC;       /* Areia Clara (Fundo principal) */
+    --tropical-medium-sand: #F5DEB3;      /* Areia Média (Seções secundárias) */
+    --tropical-green: #2E8B57;            /* Verde Tropical (Natureza, Frescor) */
+    --tropical-ocean-blue: #1E90FF;       /* Azul Oceano (Água, Céu) */
+    --tropical-dark-gray: #333333;        /* Cinza Escuro (Contraste, Modernidade) */
+    --tropical-black: #000000;            /* Preto (Texto, Rodapé) */
 }
 
 body {
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
-    background-color: var(--tropical-light-sand);
-    color: var(--tropical-dark-green);
+    background-color: var(--tropical-light-sand); /* Fundo de areia clara */
+    color: var(--tropical-dark-brown); /* Texto principal em marrom coco escuro */
 }
 
 .font-pacifico {
     font-family: 'Pacifico', cursive;
 }
 
-/* Utility Classes for Colors */
-.bg-tropical-golden-yellow { background-color: var(--tropical-golden-yellow); }
-.text-tropical-golden-yellow { color: var(--tropical-golden-yellow); }
-.bg-tropical-emerald { background-color: var(--tropical-emerald); }
-.text-tropical-emerald { color: var(--tropical-emerald); }
-.bg-tropical-blue-turq { background-color: var(--tropical-blue-turq); }
-.text-tropical-blue-turq { color: var(--tropical-blue-turq); }
+/* Utility Classes for Colors (Atualizadas) */
+.bg-tropical-soft-yellow { background-color: var(--tropical-soft-yellow); }
+.text-tropical-soft-yellow { color: var(--tropical-soft-yellow); }
+.bg-tropical-sunset-orange { background-color: var(--tropical-sunset-orange); }
+.text-tropical-sunset-orange { color: var(--tropical-sunset-orange); }
 .bg-tropical-coral { background-color: var(--tropical-coral); }
 .text-tropical-coral { color: var(--tropical-coral); }
-.bg-tropical-dark-green { background-color: var(--tropical-dark-green); }
-.text-tropical-dark-green { color: var(--tropical-dark-green); }
+.bg-tropical-dark-brown { background-color: var(--tropical-dark-brown); }
+.text-tropical-dark-brown { color: var(--tropical-dark-brown); }
 .bg-tropical-light-sand { background-color: var(--tropical-light-sand); }
 .text-tropical-light-sand { color: var(--tropical-light-sand); }
-.bg-tropical-light-sand-darker { background-color: var(--tropical-light-sand-darker); }
+.bg-tropical-medium-sand { background-color: var(--tropical-medium-sand); }
+.text-tropical-medium-sand { color: var(--tropical-medium-sand); }
+.bg-tropical-green { background-color: var(--tropical-green); }
+.text-tropical-green { color: var(--tropical-green); }
+.bg-tropical-ocean-blue { background-color: var(--tropical-ocean-blue); }
+.text-tropical-ocean-blue { color: var(--tropical-ocean-blue); }
+.bg-tropical-dark-gray { background-color: var(--tropical-dark-gray); }
+.text-tropical-dark-gray { color: var(--tropical-dark-gray); }
+.bg-tropical-black { background-color: var(--tropical-black); }
+.text-tropical-black { color: var(--tropical-black); }
+
 
 /* Navbar */
 #nav-fundo {
-    background: linear-gradient(to right, var(--tropical-dark-green), var(--tropical-emerald));
+    /* Gradiente de marrom coco escuro para laranja pôr do sol */
+    background: linear-gradient(to right, var(--tropical-dark-brown), var(--tropical-sunset-orange));
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -54,7 +66,7 @@ body {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: var(--tropical-golden-yellow);
+    background-color: var(--tropical-soft-yellow); /* Sublinhado em amarelo suave */
     transition: width 0.3s ease-out;
 }
 
@@ -64,7 +76,7 @@ body {
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(rgba(114, 116, 109, 0.6), rgba(196, 231, 113, 0.6)), 
+    background: linear-gradient(rgba(90, 59, 43, 0.6), rgba(255, 140, 0, 0.6)), /* Marrom Coco e Laranja Pôr do Sol com opacidade */
                 url('./img/foto_capa.png') no-repeat center center;
     background-size: cover;
     height: 100vh;
@@ -81,13 +93,14 @@ body {
 }
 
 .countdown-box {
-    background-color: rgba(26, 82, 64, 0.8); /* tropical-dark-green with opacity */
-    border: 2px solid var(--tropical-golden-yellow);
+    /* Marrom coco escuro com opacidade */
+    background-color: rgba(90, 59, 43, 0.8);
+    border: 2px solid var(--tropical-soft-yellow);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 .btn-primary {
-    background-color: var(--tropical-coral);
+    background-color: var(--tropical-ocean-blue); /* Botão primário em azul oceano */
     color: white;
     padding: 12px 32px;
     border-radius: 9999px;
@@ -97,8 +110,8 @@ body {
 }
 
 .btn-primary:hover {
-    background-color: var(--tropical-golden-yellow);
-    color: var(--tropical-dark-green);
+    background-color: var(--tropical-soft-yellow); /* Hover em amarelo suave */
+    color: var(--tropical-dark-brown); /* Texto do botão em marrom coco escuro */
     transform: scale(1.05);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
@@ -112,25 +125,25 @@ body {
 .program-card:hover {
     transform: translateY(-8px) scale(1.02);
     box-shadow: 0 15px 30px rgba(0,0,0,0.25);
-    border-color: var(--tropical-blue-turq);
+    border-color: var(--tropical-sunset-orange); /* Borda de hover em laranja pôr do sol */
 }
 
 .speaker-card:hover {
     transform: translateY(-8px) scale(1.03);
     box-shadow: 0 15px 30px rgba(0,0,0,0.25);
-    border-color: var(--tropical-coral);
+    border-color: var(--tropical-coral); /* Borda de hover em rosa coral */
 }
 
 .activity-card:hover {
     transform: translateY(-8px) scale(1.03);
     box-shadow: 0 15px 30px rgba(0,0,0,0.25);
-    border-color: var(--tropical-golden-yellow);
+    border-color: var(--tropical-green); /* Borda de hover em verde tropical */
 }
 
 .testimonial-card:hover {
     transform: translateY(-8px) scale(1.02);
     box-shadow: 0 15px 30px rgba(0,0,0,0.25);
-    border-color: var(--tropical-emerald);
+    border-color: var(--tropical-sunset-orange); /* Borda de hover em laranja pôr do sol */
 }
 
 .gallery-item img {
@@ -151,7 +164,7 @@ body {
 
 .gallery-item:hover {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    border-color: var(--tropical-blue-turq);
+    border-color: var(--tropical-sunset-orange); /* Borda de hover em laranja pôr do sol */
     transform: scale(1.02);
 }
 
@@ -334,4 +347,23 @@ body {
 
 body::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera*/
+}
+
+/* Custom styles for the registration button */
+#botao-inscricao {
+    background-color: white;
+    color: black; /* Cor inicial do botão de inscrição */
+}
+#botao-inscricao:hover {
+    background-color: rgb(63, 63, 63); /* Cor de hover do botão de inscrição */
+    color: white; /* Cor do texto no hover */
+}
+
+#dia1{
+    background-color: rgba(255, 255, 255, 0.068);
+}
+
+#atividade{
+    background-color: rgb(29, 29, 29);
+    color: white;
 }
