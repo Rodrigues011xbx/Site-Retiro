@@ -1,17 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Pacifico&display=swap');
 
-/* Custom Color Palette - Comunhão Tropical (Atualizada) */
+/* Custom Color Palette - Comunhão Tropical */
 :root {
     --tropical-soft-yellow: #FFD700;      /* Amarelo Suave (Sol, Destaques) */
     --tropical-sunset-orange: #FF8C00;    /* Laranja Pôr do Sol (Energia, Calor) */
-    --tropical-coral: #FF6347;            /* Rosa Coral (Corais, Flores) */
+    --tropical-coral: #FF7F50;            /* Rosa Coral (Corais, Flores) */
     --tropical-dark-brown: #5A3B2B;       /* Marrom Coco Escuro (Troncos, Terra) */
-    --tropical-light-sand: #FFF8DC;       /* Areia Clara (Fundo principal) */
+    --tropical-light-sand: #F5F5F5;       /* Areia Clara (Fundo principal) */
     --tropical-medium-sand: #F5DEB3;      /* Areia Média (Seções secundárias) */
-    --tropical-green: #2E8B57;            /* Verde Tropical (Natureza, Frescor) */
-    --tropical-ocean-blue: #1E90FF;       /* Azul Oceano (Água, Céu) */
+    --tropical-green: #32CD32;            /* Verde Tropical (Natureza, Frescor) */
+    --tropical-ocean-blue: #2D87CB;       /* Azul Oceano (Água, Céu) */
     --tropical-dark-gray: #333333;        /* Cinza Escuro (Contraste, Modernidade) */
     --tropical-black: #000000;            /* Preto (Texto, Rodapé) */
+    /* --tropical-soft-yellow: #FFD700;      /* Amarelo Suave (Sol, Destaques) */
+    /* --tropical-sunset-orange: #FF8C00;    /* Laranja Pôr do Sol (Energia, Calor) */
+    /* --tropical-coral: #FF6347;            /* Rosa Coral (Corais, Flores) */
+    /* --tropical-dark-brown: #5A3B2B;       /* Marrom Coco Escuro (Troncos, Terra) */
+    /* --tropical-light-sand: #FFF8DC;       /* Areia Clara (Fundo principal) */
+    /* --tropical-medium-sand: #F5DEB3;      /* Areia Média (Seções secundárias) */
+    /* --tropical-green: #2E8B57;            /* Verde Tropical (Natureza, Frescor) */
+    /* --tropical-ocean-blue: #1E90FF;       /* Azul Oceano (Água, Céu) */
+    /* --tropical-dark-gray: #333333;        /* Cinza Escuro (Contraste, Modernidade) */
+    /* --tropical-black: #000000;            /* Preto (Texto, Rodapé) */
 }
 
 body {
@@ -26,24 +36,34 @@ body {
 }
 
 /* Utility Classes for Colors (Atualizadas) */
+.border-tropical-soft-yellow { border-color: var(--tropical-soft-yellow); }
 .bg-tropical-soft-yellow { background-color: var(--tropical-soft-yellow); }
 .text-tropical-soft-yellow { color: var(--tropical-soft-yellow); }
+.border-tropical-sunset-orange { border-color: var(--tropical-sunset-orange); }
 .bg-tropical-sunset-orange { background-color: var(--tropical-sunset-orange); }
 .text-tropical-sunset-orange { color: var(--tropical-sunset-orange); }
+.border-tropical-coral { border-color: var(--tropical-coral); }
 .bg-tropical-coral { background-color: var(--tropical-coral); }
 .text-tropical-coral { color: var(--tropical-coral); }
+.border-tropical-dark-brown { border-color: var(--tropical-dark-brown); }
 .bg-tropical-dark-brown { background-color: var(--tropical-dark-brown); }
 .text-tropical-dark-brown { color: var(--tropical-dark-brown); }
+.border-tropical-light-sand { border-color: var(--tropical-light-sand); }
 .bg-tropical-light-sand { background-color: var(--tropical-light-sand); }
 .text-tropical-light-sand { color: var(--tropical-light-sand); }
+.border-tropical-medium-sand { border-color: var(--tropical-medium-sand); }
 .bg-tropical-medium-sand { background-color: var(--tropical-medium-sand); }
 .text-tropical-medium-sand { color: var(--tropical-medium-sand); }
+.border-tropical-green { border-color: var(--tropical-green); }
 .bg-tropical-green { background-color: var(--tropical-green); }
 .text-tropical-green { color: var(--tropical-green); }
+.border-tropical-ocean-blue { border-color: var(--tropical-ocean-blue); }
 .bg-tropical-ocean-blue { background-color: var(--tropical-ocean-blue); }
 .text-tropical-ocean-blue { color: var(--tropical-ocean-blue); }
+.border-tropical-dark-gray { border-color: var(--tropical-dark-gray); }
 .bg-tropical-dark-gray { background-color: var(--tropical-dark-gray); }
 .text-tropical-dark-gray { color: var(--tropical-dark-gray); }
+.border-tropical-black { border-color: var(--tropical-black); }
 .bg-tropical-black { background-color: var(--tropical-black); }
 .text-tropical-black { color: var(--tropical-black); }
 
@@ -51,7 +71,7 @@ body {
 /* Navbar */
 #nav-fundo {
     /* Gradiente de marrom coco escuro para laranja pôr do sol */
-    background: linear-gradient(to right, var(--tropical-dark-brown), var(--tropical-sunset-orange));
+    /* background: linear-gradient(to right, var(--tropical-dark-brown), var(--tropical-sunset-orange)); */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -76,7 +96,7 @@ body {
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(rgba(90, 59, 43, 0.6), rgba(255, 140, 0, 0.6)), /* Marrom Coco e Laranja Pôr do Sol com opacidade */
+    background: linear-gradient(rgba(90, 59, 43, 0.6), rgba(167, 142, 113, 0.6)), /* Marrom Coco e Laranja Pôr do Sol com opacidade */
                 url('./img/foto_capa.png') no-repeat center center;
     background-size: cover;
     height: 100vh;
@@ -95,7 +115,6 @@ body {
 .countdown-box {
     /* Marrom coco escuro com opacidade */
     background-color: rgba(90, 59, 43, 0.8);
-    border: 2px solid var(--tropical-soft-yellow);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -137,7 +156,7 @@ body {
 .activity-card:hover {
     transform: translateY(-8px) scale(1.03);
     box-shadow: 0 15px 30px rgba(0,0,0,0.25);
-    border-color: var(--tropical-green); /* Borda de hover em verde tropical */
+    border-color: var(--tropical-coral);
 }
 
 .testimonial-card:hover {
@@ -361,9 +380,4 @@ body::-webkit-scrollbar {
 
 #dia1{
     background-color: rgba(255, 255, 255, 0.068);
-}
-
-#atividade{
-    background-color: rgb(29, 29, 29);
-    color: white;
 }
