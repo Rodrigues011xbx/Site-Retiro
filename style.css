@@ -2,6 +2,7 @@
 
 /* Custom Color Palette - Comunhão Tropical */
 :root {
+    --tropical-orange-fraco: rgb(252, 155, 45);
     --tropical-soft-yellow: #FFD700;      /* Amarelo Suave (Sol, Destaques) */
     --tropical-sunset-orange: #FF8C00;    /* Laranja Pôr do Sol (Energia, Calor) */
     --tropical-coral: #FF7F50;            /* Rosa Coral (Corais, Flores) */
@@ -374,10 +375,28 @@ body::-webkit-scrollbar {
     color: black; /* Cor inicial do botão de inscrição */
 }
 #botao-inscricao:hover {
-    background-color: rgb(63, 63, 63); /* Cor de hover do botão de inscrição */
+    background-color: var(--tropical-coral); /* Cor de hover do botão de inscrição */
     color: white; /* Cor do texto no hover */
 }
 
 #dia1{
     background-color: rgba(255, 255, 255, 0.068);
+}
+
+#botao-foter{
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}
+
+#botao-foter:hover{
+    color: white;
+    background-color: var(--tropical-coral);
+}
+
+#pale{
+     background: linear-gradient(rgba(49, 48, 47, 0.6), rgba(167, 142, 113, 0.6)), /* Marrom Coco e Laranja Pôr do Sol com opacidade */
+                url('./img/pale.jpg') no-repeat center center;
+   background-repeat: no-repeat;
+   background-size: cover;
 }
