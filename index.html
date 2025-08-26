@@ -16,7 +16,7 @@
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex justify-between items-center py-4">
                 <div class="flex items-center">
-                    <span class="text-3xl font-bold text-white flex items-center font-pacifico animate-fade-in">
+                    <span id="titulo-pagina" class="text-3xl font-bold text-white flex items-center animate-fade-in">
                         <span class="text-tropical-dark-brown rounded-full w-10 h-10 flex items-center justify-center mr-3 shadow-lg transform hover:scale-110 transition-transform duration-300"><img src="./img/Abacaxi Colorido(1).png"></span>
                         Comunhão Tropical
                     </span>
@@ -62,11 +62,13 @@
         </div>
     </nav>
 
+    <br>
+
     <!-- Hero Section -->
     <section id="home" class="hero-section flex items-center justify-center text-white relative overflow-hidden">
         <div class="hero-overlay absolute inset-0 bg-black opacity-50"></div>
         <div class="text-center px-4 relative z-10 animate-fade-in-up">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6 font-pacifico text-tropical-medium-sand drop-shadow-lg">RETIRO JOVEM 2025</h1>
+            <h1 id="apre" class="text-4xl md:text-6xl font-bold mb-6 text-tropical-medium-sand drop-shadow-lg">RETIRO JOVEM 2025</h1>
             <p class="text-xl md:text-2xl mb-8 text-tropical-light-sand animate-pulse-slow">Transformando vidas através de Cristo</p>
             
             <div class="countdown-box p-6 rounded-lg inline-block bg-tropical-dark-brown bg-opacity-80 shadow-2xl border-2 border-tropical-medium-sand transform hover:scale-105 transition-transform duration-300">
@@ -131,11 +133,11 @@
                             <span class="block text-sm">Dias</span>
                         </div>
                         <div class="text-center bg-tropical-soft-yellow text-tropical-dark-brown p-4 rounded-lg shadow-md transform hover:scale-110 transition-transform duration-300">
-                            <span class="text-3xl font-bold block">10+</span>
+                            <span class="text-3xl font-bold block">05+</span>
                             <span class="block text-sm">Atividades</span>
                         </div>
                         <div class="text-center bg-tropical-coral text-white p-4 rounded-lg shadow-md transform hover:scale-110 transition-transform duration-300">
-                            <span class="text-3xl font-bold block">00</span>
+                            <span class="text-3xl font-bold block">03</span>
                             <span class="block text-sm">Palestrantes</span>
                         </div>
                     </div>
@@ -148,57 +150,43 @@
     <section id="pale" class="py-20">
         <div class="max-w-6xl mx-auto px-4">
             <div class="text-center mb-16 animate-fade-in">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-tropical-light-sand">Nossos Palestrantes <span class="text-tropical-soft-yellow">🎤</span></h2>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-tropical-light-sand">Liderança<span class="text-tropical-soft-yellow"></span></h2>
                 <div class="w-20 h-1 bg-tropical-soft-yellow mx-auto mb-6 rounded-full"></div>
                 <p class="text-lg max-w-2xl mx-auto text-tropical-light-sand opacity-90">Conheça os ministros que estarão conosco neste retiro</p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
                 <!-- Speaker 1 -->
                 <div class="speaker-card bg-white rounded-lg overflow-hidden shadow-xl transition duration-300 hover:shadow-2xl transform hover:scale-105 animate-fade-in-up">
-                    <div class="w-full h-64 bg-tropical-light-sand overflow-hidden">
-                        <img src="./img/cruz.jpeg" alt="Pr. Vinícius Almeida" class="w-full h-full object-cover object-top transform hover:scale-110 transition-transform duration-500">
+                    <div id="card-pale" class="w-full h-66 bg-tropical-light-sand overflow-hidden">
+                        <img id="img-vini" src="./img/vini-atualizado.png" alt="Pr. Vinícius Almeida" class="w-full h-full object-cover object-top transform hover:scale-110 transition-transform duration-500">
                     </div>
-                    <div class="p-4 text-center">
-                        <h3 class="text-xl font-bold text-tropical-dark-brown mb-1">indefinido</h3>
-                        <p class="text-tropical-sunset-orange text-sm">Líder Pastoral</p>
-                        <p class="text-tropical-dark-brown mt-2 text-sm opacity-80">Especialista em liderança cristã e ministério com jovens há mais de 15 anos.</p>
-                    </div>
-                </div>
-                
-                <!-- Speaker 2 -->
-                <div class="speaker-card bg-white rounded-lg overflow-hidden shadow-xl transition duration-300 hover:shadow-2xl transform hover:scale-105 animate-fade-in-up delay-100">
-                    <div class="w-full h-64 bg-tropical-light-sand overflow-hidden">
-                        <img src="./img/cross-top-mountain.jpg" alt="Diácono Claudevan" class="w-full h-full object-cover object-top transform hover:scale-110 transition-transform duration-500">
-                    </div>
-                    <div class="p-4 text-center">
-                        <h3 class="text-xl font-bold text-tropical-dark-brown mb-1">indefinido</h3>
-                        <p class="text-tropical-sunset-orange text-sm">Organização de Serviços</p>
-                        <p class="text-tropical-dark-brown mt-2 text-sm opacity-80">Especializado em relacionamentos e saúde emocional na perspectiva cristã.</p>
+                    <div id="paragrafo" class="p-4 text-center">
+                        <h3 class="text-xl font-bold text-tropical-dark-brown mb-1">Pastor</h3>
+                        <p class="text-tropical-sunset-orange text-sm">Vinícius Benjamim</p>
                     </div>
                 </div>
                 
-                <!-- Speaker 3 -->
-                <div class="speaker-card bg-white rounded-lg overflow-hidden shadow-xl transition duration-300 hover:shadow-2xl transform hover:scale-105 animate-fade-in-up delay-200">
-                    <div class="w-full h-64 bg-tropical-light-sand overflow-hidden">
-                        <img src="./img/biblia.jpg" alt="Líder - Henrique" class="w-full h-full object-cover object-top transform hover:scale-110 transition-transform duration-500">
+                 <!-- Speaker 2 -->
+                <div class="speaker-card bg-white rounded-lg overflow-hidden shadow-xl transition duration-300 hover:shadow-2xl transform hover:scale-105 animate-fade-in-up">
+                    <div id="card-pale" class="w-full h-66 bg-tropical-light-sand overflow-hidden">
+                        <img id="img-vini" src="./img/cross-top-mountain.jpg" alt="Pr. Vinícius Almeida" class="w-full h-full object-cover object-top transform hover:scale-110 transition-transform duration-500">
                     </div>
-                    <div class="p-4 text-center">
-                        <h3 class="text-xl font-bold text-tropical-dark-brown mb-1">indefinido</h3>
-                        <p class="text-tropical-sunset-orange text-sm">Ministração de Ensinos</p>
-                        <p class="text-tropical-dark-brown mt-2 text-sm opacity-80">Conhecido por abordagens inovadoras para alcançar a geração jovem.</p>
+                    <div id="paragrafo" class="p-4 text-center">
+                        <h3 class="text-xl font-bold text-tropical-dark-brown mb-1">Pastor</h3>
+                        <p class="text-tropical-sunset-orange text-sm">Henrique feitosa</p>
                     </div>
                 </div>
                 
-                <!-- Speaker 4 -->
-                <div class="speaker-card bg-white rounded-lg overflow-hidden shadow-xl transition duration-300 hover:shadow-2xl transform hover:scale-105 animate-fade-in-up delay-300">
-                    <div class="w-full h-64 bg-tropical-light-sand overflow-hidden">
-                        <img src="./img/adorar.jpg" alt="Jovem - Gustavo" class="w-full h-full object-cover object-top transform hover:scale-110 transition-transform duration-500">
+                  <!-- Speaker 4 -->
+                <div class="speaker-card bg-white rounded-lg overflow-hidden shadow-xl transition duration-300 hover:shadow-2xl transform hover:scale-105 animate-fade-in-up">
+                    <div id="card-pale" class="w-full h-66 bg-tropical-light-sand overflow-hidden">
+                        <img id="img-vini" src="./img/claudevan.png" alt="Pr. Vinícius Almeida" class="w-full h-full object-cover object-top transform hover:scale-110 transition-transform duration-500">
                     </div>
-                    <div class="p-4 text-center">
-                        <h3 class="text-xl font-bold text-tropical-dark-brown mb-1">indefinido</h3>
-                        <p class="text-tropical-sunset-orange text-sm">Responsáveis pela música</p>
-                        <p class="text-tropical-dark-brown mt-2 text-sm opacity-80">Líder de adoração e compositor de músicas cristãs contemporâneas.</p>
+                    <div id="paragrafo" class="p-4 text-center">
+                        <h3 class="text-xl font-bold text-tropical-dark-brown mb-1">Diácono</h3>
+                        <p class="text-tropical-sunset-orange text-sm">Claudevan Almeida</p>
                     </div>
                 </div>
             </div>
@@ -206,7 +194,7 @@
     </section>
 
     <!-- Program Section -->
-    <section id="program" class="py-20 bg-gradient-to-br from-tropical-light-sand to-tropical-medium-sand text-tropical-dark-brown">
+    <section id="program" class="py-20 mt-20 bg-gradient-to-br from-tropical-light-sand to-tropical-medium-sand text-tropical-dark-brown">
         <div class="max-w-6xl mx-auto px-4">
             <div class="text-center mb-16 animate-fade-in">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4 text-tropical-dark-brown">Programação <span class="text-tropical-sunset-orange">🗓️</span></h2>
@@ -227,50 +215,18 @@
                                 </div>
                             </div>
                             <div>
-                                <div class="text-sm font-bold text-tropical-sunset-orange mb-1">14:00 - 16:00</div>
-                                <h4 class="text-lg font-bold text-tropical-dark-brown mb-2">Chegada e Credenciamento</h4>
+                                <div class="text-sm font-bold text-tropical-sunset-orange mb-1">20:00 - 23:59</div>
+                                <h4 class="text-lg font-bold text-tropical-dark-brown mb-2">Noite de jogos</h4>
                                 <p class="text-tropical-dark-brown text-opacity-90">Recepção e acomodação dos participantes no local do retiro.</p>
                             </div>
                         </div>
                     </div>
                     
-                    <!-- Event 2 -->
-                    <div class="program-day-card p-6 rounded-xl bg-white border-l-4 border-tropical-coral shadow-md relative overflow-hidden transition-all duration-300 hover:shadow-lg hover:translate-x-1">
-                        <div class="flex items-start">
-                            <div class="mr-4 mt-1 flex-shrink-0">
-                                <div class="bg-tropical-sunset-orange bg-opacity-20 p-2 rounded-full">
-                                    <i class="fas fa-church text-white text-xl"></i>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="text-sm font-bold text-tropical-sunset-orange mb-1">19:00 - 21:00</div>
-                                <h4 class="text-lg font-bold text-tropical-dark-brown mb-2">Culto de Abertura</h4>
-                                <p class="text-tropical-dark-brown text-opacity-90">Momento de louvor e palavra com o Pr. Vinícius Almeida.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Event 3 -->
-                    <div class="program-day-card p-6 rounded-xl bg-white border-l-4 border-tropical-coral shadow-md relative overflow-hidden transition-all duration-300 hover:shadow-lg hover:translate-x-1">
-                        <div class="flex items-start">
-                            <div class="mr-4 mt-1 flex-shrink-0">
-                                <div class="bg-tropical-sunset-orange bg-opacity-20 p-2 rounded-full">
-                                    <i class="fas fa-users text-white text-xl"></i>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="text-sm font-bold text-tropical-sunset-orange mb-1">21:30 - 23:00</div>
-                                <h4 class="text-lg font-bold text-tropical-dark-brown mb-2">Noite de Integração</h4>
-                                <p class="text-tropical-dark-brown text-opacity-90">Atividades e dinâmicas para quebrar o gelo e conhecer os participantes.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
+             <br><br><br>
+
            <!-- Day 2 -->
             <div class="mb-16 animate-fade-in-up">
-                <h3 class="text-2xl mb-10 font-bold text-tropical-dark-brown text-center">Dia 2 - Chegada 🌴</h3>
+                <h3 class="text-2xl mb-10 font-bold text-tropical-dark-brown text-center">Dia 2 - Encontro 📖</h3>
                 <div class="flex flex-col space-y-4">
                     <!-- Event 1 -->
                     <div class="program-day-card p-6 rounded-xl bg-white border-l-4 border-tropical-coral shadow-md relative overflow-hidden transition-all duration-300 hover:shadow-lg hover:translate-x-1">
@@ -282,9 +238,9 @@
                                 </div>
                             </div>
                             <div>
-                                <div class="text-sm font-bold text-tropical-sunset-orange mb-1">14:00 - 16:00</div>
-                                <h4 class="text-lg font-bold text-tropical-dark-brown mb-2">Chegada e Credenciamento</h4>
-                                <p class="text-tropical-dark-brown text-opacity-90">Recepção e acomodação dos participantes no local do retiro.</p>
+                                <div class="text-sm font-bold text-tropical-sunset-orange mb-1">09:00 - 12:00</div>
+                                <h4 class="text-lg font-bold text-tropical-dark-brown mb-2">Início do encontro</h4>
+                                <p class="text-tropical-dark-brown text-opacity-90">Momento de quebrantamento, louvor e oração.</p>
                             </div>
                         </div>
                     </div>
@@ -298,9 +254,9 @@
                                 </div>
                             </div>
                             <div>
-                                <div class="text-sm font-bold text-tropical-sunset-orange mb-1">19:00 - 21:00</div>
-                                <h4 class="text-lg font-bold text-tropical-dark-brown mb-2">Culto de Abertura</h4>
-                                <p class="text-tropical-dark-brown text-opacity-90">Momento de louvor e palavra com o Pr. Vinícius Almeida.</p>
+                                <div class="text-sm font-bold text-tropical-sunset-orange mb-1">13:00 - 17:00</div>
+                                <h4 class="text-lg font-bold text-tropical-dark-brown mb-2">Aperta pastor</h4>
+                                <p class="text-tropical-dark-brown text-opacity-90">Momento em que os jovens têm a oportunidade de estar próximos ao pastor para comunhão, tirar dúvidas e aprender mais sobre a fé.</p>
                             </div>
                         </div>
                     </div>
@@ -314,19 +270,19 @@
                                 </div>
                             </div>
                             <div>
-                                <div class="text-sm font-bold text-tropical-sunset-orange mb-1">21:30 - 23:00</div>
-                                <h4 class="text-lg font-bold text-tropical-dark-brown mb-2">Noite de Integração</h4>
-                                <p class="text-tropical-dark-brown text-opacity-90">Atividades e dinâmicas para quebrar o gelo e conhecer os participantes.</p>
+                                <div class="text-sm font-bold text-tropical-sunset-orange mb-1">19:00 - 21:30</div>
+                                <h4 class="text-lg font-bold text-tropical-dark-brown mb-2">Encontro</h4>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <br>
 
             <!-- Day 3 -->
             <div class="mb-16 animate-fade-in-up">
-                <h3 class="text-2xl mb-10 font-bold text-tropical-dark-brown text-center">Dia 3 - Chegada 🌴</h3>
+                <h3 class="text-2xl mb-10 font-bold text-tropical-dark-brown text-center">Dia 3 - Fechamento 👋</h3>
                 <div class="flex flex-col space-y-4">
                     <!-- Event 1 -->
                     <div class="program-day-card p-6 rounded-xl bg-white border-l-4 border-tropical-coral shadow-md relative overflow-hidden transition-all duration-300 hover:shadow-lg hover:translate-x-1">
@@ -338,9 +294,8 @@
                                 </div>
                             </div>
                             <div>
-                                <div class="text-sm font-bold text-tropical-sunset-orange mb-1">14:00 - 16:00</div>
-                                <h4 class="text-lg font-bold text-tropical-dark-brown mb-2">Chegada e Credenciamento</h4>
-                                <p class="text-tropical-dark-brown text-opacity-90">Recepção e acomodação dos participantes no local do retiro.</p>
+                                <div class="text-sm font-bold text-tropical-sunset-orange mb-1">09:00 - 12:00</div>
+                                <h4 class="text-lg font-bold text-tropical-dark-brown mb-2">Encontro</h4>
                             </div>
                         </div>
                     </div>
@@ -354,25 +309,8 @@
                                 </div>
                             </div>
                             <div>
-                                <div class="text-sm font-bold text-tropical-sunset-orange mb-1">19:00 - 21:00</div>
-                                <h4 class="text-lg font-bold text-tropical-dark-brown mb-2">Culto de Abertura</h4>
-                                <p class="text-tropical-dark-brown text-opacity-90">Momento de louvor e palavra com o Pr. Vinícius Almeida.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Event 3 -->
-                    <div class="program-day-card p-6 rounded-xl bg-white border-l-4 border-tropical-coral shadow-md relative overflow-hidden transition-all duration-300 hover:shadow-lg hover:translate-x-1">
-                        <div class="flex items-start">
-                            <div class="mr-4 mt-1 flex-shrink-0">
-                                <div class="bg-tropical-sunset-orange bg-opacity-20 p-2 rounded-full">
-                                    <i class="fas fa-users text-white text-xl"></i>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="text-sm font-bold text-tropical-sunset-orange mb-1">21:30 - 23:00</div>
-                                <h4 class="text-lg font-bold text-tropical-dark-brown mb-2">Noite de Integração</h4>
-                                <p class="text-tropical-dark-brown text-opacity-90">Atividades e dinâmicas para quebrar o gelo e conhecer os participantes.</p>
+                                <div class="text-sm font-bold text-tropical-sunset-orange mb-1">14:00 - 16:00</div>
+                                <h4 class="text-lg font-bold text-tropical-dark-brown mb-2">Organização e saída</h4>
                             </div>
                         </div>
                     </div>
@@ -382,7 +320,7 @@
     </section>
 
     <!-- Location Section -->
-    <section id="location" class="py-20 bg-tropical-light-sand text-tropical-dark-brown">
+    <section id="location" class="pb-20 mb-20 bg-tropical-light-sand text-tropical-dark-brown">
         <div class="max-w-6xl mx-auto px-4">
             <div class="text-center mb-16 animate-fade-in">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4 text-tropical-dark-brown">Local do Evento <span class="text-tropical-coral">📍</span></h2>
@@ -410,14 +348,6 @@
                             <li class="flex items-center text-tropical-dark-brown">
                                 <i class="fas fa-map-marker-alt text-tropical-coral mr-2 text-lg"></i>
                                 <a target="_blank" href="https://maps.app.goo.gl/ftCaYddFDhaUby5S7" class="text-tropical-dark-brown hover:text-tropical-sunset-orange underline transition-colors duration-300">Barra de Santo Antônio</a> 
-                            </li>
-                            <li class="flex items-center text-tropical-dark-brown">
-                                <i class="fas fa-utensils text-tropical-coral mr-2 text-lg"></i>
-                                <span>Refeitório amplo</span>
-                            </li>
-                            <li class="flex items-center text-tropical-dark-brown">
-                                <i class="fas fa-basketball-ball text-tropical-coral mr-2 text-lg"></i>
-                                <span>Quadras esportivas</span>
                             </li>
                         </ul>
                     </div>
@@ -449,7 +379,7 @@
                                 </div>
                                 <div>
                                     <h4 class="font-semibold text-tropical-dark-brown">Transporte da Igreja</h4>
-                                    <p class="text-tropical-dark-brown opacity-80">Não sabemos ainda<span class="text-tropical-coral">⚠️</span></p>
+                                    <p class="text-tropical-dark-brown opacity-80">A definir<span class="text-tropical-coral">⚠️</span></p>
                                 </div>
                             </div>
                         </div>
@@ -519,7 +449,7 @@
                         <i class="fas fa-chevron-down text-tropical-coral transition-transform duration-300 text-xl"></i>
                     </button>
                     <div class="faq-answer px-6 pb-6 hidden">
-                        <p class="text-tropical-dark-brown opacity-80 leading-relaxed">O retiro é aberto para jovens de 13 a 35 anos. Membros da igreja e convidados são bem-vindos, desde que estejam em sintonia com os princípios cristãos que norteiam o evento.</p>
+                        <p class="text-tropical-dark-brown opacity-80 leading-relaxed">Para o retiro a idade mínima é 15 anos. Membros da igreja e convidados serão bem-vindos, desde que estejam em sintonia com os organizadores do evento.</p>
                     </div>
                 </div>
                 
